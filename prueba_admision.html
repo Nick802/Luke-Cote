@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prueba de Admisión – Colegio Técnico Profesional</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f4f6fb;
+      color: #222;
+      padding: 24px 16px;
+    }
+    header {
+      background: #003366;
+      color: #fff;
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.6rem; margin-bottom: 6px; }
+    header p  { font-size: 0.97rem; opacity: 0.88; }
+    .info-box {
+      background: #fff;
+      border-left: 5px solid #003366;
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-bottom: 28px;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .info-box strong { color: #003366; }
+    section.bloque {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 24px 28px;
+      margin-bottom: 28px;
+    }
+    section.bloque h2 {
+      font-size: 1.1rem;
+      color: #003366;
+      border-bottom: 2px solid #e0e8f5;
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+    }
+    .texto-lectura {
+      background: #f0f4fa;
+      border-radius: 6px;
+      padding: 16px 18px;
+      margin-bottom: 20px;
+      font-size: 0.93rem;
+      line-height: 1.75;
+      border-left: 4px solid #4a90d9;
+    }
+    .item {
+      margin-bottom: 22px;
+    }
+    .item p.pregunta {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .item label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.93rem;
+      line-height: 1.45;
+      transition: background 0.15s;
+    }
+    .item label:hover { background: #eef3fb; }
+    .item input[type="radio"] { margin-top: 2px; flex-shrink: 0; accent-color: #003366; }
+    .resultado-btn {
+      display: block;
+      margin: 32px auto 8px;
+      background: #003366;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      padding: 14px 40px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .resultado-btn:hover { background: #00509e; }
+    #resultado {
+      text-align: center;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 8px;
+      display: none;
+    }
+    #resultado.pass  { background: #d4edda; color: #155724; }
+    #resultado.fail  { background: #f8d7da; color: #721c24; }
+    footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #888;
+      margin-top: 36px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Prueba de Admisión – Colegio Técnico Profesional</h1>
+  <p>Ministerio de Educación Pública · Costa Rica</p>
+</header>
+
+<div class="info-box">
+  <strong>Instrucciones generales:</strong><br>
+  Esta prueba consta de <strong>40 ítems de selección única</strong>. Lea cada pregunta cuidadosamente y marque <em>solo una</em> respuesta por ítem.
+  El tiempo máximo permitido es de <strong>2 horas (120 minutos)</strong>. Está prohibido el uso de calculadora salvo indicación contraria.<br><br>
+  <strong>Secciones:</strong><br>
+  A) Comprensión Lectora – Ciberseguridad (ítems 1–10)<br>
+  B) Razonamiento Lógico (ítems 11–22)<br>
+  C) Operaciones Matemáticas y Porcentajes (ítems 23–40)
+</div>
+
+<!-- ===================== SECCIÓN A ===================== -->
+<section class="bloque">
+  <h2>Sección A – Comprensión Lectora: Ciberseguridad</h2>
+
+  <div class="texto-lectura">
+    <strong>Texto 1 (ítems 1–5)</strong><br><br>
+    El phishing es una de las técnicas de ingeniería social más utilizadas por ciberdelincuentes. Consiste en el envío masivo de mensajes electrónicos que simulan provenir de entidades legítimas —como bancos, servicios de correo o plataformas de comercio— con el fin de engañar al usuario para que revele información confidencial, como contraseñas o números de tarjeta de crédito.<br><br>
+    Los correos de phishing suelen incluir enlaces que redirigen a sitios web falsificados, casi idénticos a los originales. Una señal de alerta es la URL del sitio: aunque el diseño sea idéntico, la dirección web difiere sutilmente del dominio real. Además, muchos mensajes generan una sensación de urgencia ("Su cuenta será bloqueada en 24 horas") para presionar al usuario a actuar sin reflexionar.<br><br>
+    Las organizaciones combaten el phishing mediante filtros de spam, autenticación multifactor (MFA) y campañas de concienciación. A pesar de ello, el factor humano sigue siendo el eslabón más débil: un usuario desinformado puede comprometer toda la infraestructura de una empresa con un solo clic.
+  </div>
+
+  <div class="item" id="q1">
+    <p class="pregunta">1. ¿Cuál es el objetivo principal de un ataque de phishing según el texto?</p>
+    <label><input type="radio" name="q1" value="a"> a) Dañar físicamente los servidores de una empresa.</label>
+    <label><input type="radio" name="q1" value="b"> b) Obtener información confidencial del usuario mediante engaño.</label>
+    <label><input type="radio" name="q1" value="c"> c) Instalar actualizaciones de software no autorizadas.</label>
+    <label><input type="radio" name="q1" value="d"> d) Mejorar la experiencia del usuario en sitios web.</label>
+  </div>
+
+  <div class="item" id="q2">
+    <p class="pregunta">2. Según el texto, ¿qué elemento de un correo de phishing ayuda a identificarlo como fraudulento?</p>
+    <label><input type="radio" name="q2" value="a"> a) El logotipo idéntico al de la empresa real.</label>
+    <label><input type="radio" name="q2" value="b"> b) La dirección URL del enlace incluido en el mensaje.</label>
+    <label><input type="radio" name="q2" value="c"> c) El idioma formal utilizado en la redacción.</label>
+    <label><input type="radio" name="q2" value="d"> d) El tamaño del archivo adjunto al correo.</label>
+  </div>
+
+  <div class="item" id="q3">
+    <p class="pregunta">3. ¿Por qué los atacantes crean urgencia en sus mensajes de phishing?</p>
+    <label><input type="radio" name="q3" value="a"> a) Para que el usuario tenga tiempo de verificar la información.</label>
+    <label><input type="radio" name="q3" value="b"> b) Para cumplir con requisitos legales de notificación.</label>
+    <label><input type="radio" name="q3" value="c"> c) Para presionar al usuario a actuar sin analizar el mensaje.</label>
+    <label><input type="radio" name="q3" value="d"> d) Para mejorar la tasa de apertura de correos legítimos.</label>
+  </div>
+
+  <div class="item" id="q4">
+    <p class="pregunta">4. El texto menciona la autenticación multifactor (MFA) como medida contra el phishing. ¿Cuál es la función principal de MFA?</p>
+    <label><input type="radio" name="q4" value="a"> a) Eliminar por completo los correos de spam.</label>
+    <label><input type="radio" name="q4" value="b"> b) Requerir más de una forma de verificación de identidad para acceder.</label>
+    <label><input type="radio" name="q4" value="c"> c) Cifrar automáticamente todos los archivos del usuario.</label>
+    <label><input type="radio" name="q4" value="d"> d) Bloquear permanentemente las cuentas inactivas.</label>
+  </div>
+
+  <div class="item" id="q5">
+    <p class="pregunta">5. Según el texto, ¿cuál es "el eslabón más débil" en la seguridad de una organización?</p>
+    <label><input type="radio" name="q5" value="a"> a) Los filtros de spam desactualizados.</label>
+    <label><input type="radio" name="q5" value="b"> b) Los servidores con software obsoleto.</label>
+    <label><input type="radio" name="q5" value="c"> c) El factor humano: el usuario desinformado.</label>
+    <label><input type="radio" name="q5" value="d"> d) La falta de respaldo de datos en la nube.</label>
+  </div>
+
+  <!-- Texto 2 -->
+  <div class="texto-lectura" style="margin-top:28px;">
+    <strong>Texto 2 (ítems 6–10)</strong><br><br>
+    El ransomware es un tipo de malware que cifra los archivos de la víctima y exige el pago de un rescate —generalmente en criptomonedas— a cambio de la clave de descifrado. Los ataques de ransomware se han incrementado exponencialmente en los últimos años, afectando tanto a particulares como a hospitales, municipalidades e infraestructuras críticas.<br><br>
+    Los vectores de infección más comunes son los correos maliciosos con archivos adjuntos y la explotación de vulnerabilidades en software no actualizado. Una vez ejecutado, el ransomware puede propagarse lateralmente dentro de una red, cifrando unidades compartidas y copias de respaldo locales.<br><br>
+    Los expertos recomiendan mantener respaldos fuera de línea (offline backups), aplicar parches de seguridad con regularidad y segmentar la red para limitar la propagación. Pagar el rescate no garantiza la recuperación de los datos y, además, financia actividades delictivas.
+  </div>
+
+  <div class="item" id="q6">
+    <p class="pregunta">6. ¿Qué acción realiza el ransomware sobre los archivos de la víctima?</p>
+    <label><input type="radio" name="q6" value="a"> a) Los elimina de forma permanente e irreversible.</label>
+    <label><input type="radio" name="q6" value="b"> b) Los cifra y exige pago para restaurar el acceso.</label>
+    <label><input type="radio" name="q6" value="c"> c) Los transfiere a servidores externos sin el conocimiento del usuario.</label>
+    <label><input type="radio" name="q6" value="d"> d) Los renombra para que el usuario no pueda encontrarlos.</label>
+  </div>
+
+  <div class="item" id="q7">
+    <p class="pregunta">7. Según el texto, ¿cuál de los siguientes NO es un vector de infección habitual de ransomware?</p>
+    <label><input type="radio" name="q7" value="a"> a) Correos con archivos adjuntos maliciosos.</label>
+    <label><input type="radio" name="q7" value="b"> b) Vulnerabilidades en software sin actualizar.</label>
+    <label><input type="radio" name="q7" value="c"> c) Uso de contraseñas seguras y únicas.</label>
+    <label><input type="radio" name="q7" value="d"> d) Propagación lateral dentro de la red interna.</label>
+  </div>
+
+  <div class="item" id="q8">
+    <p class="pregunta">8. ¿Por qué los expertos desaconsejan pagar el rescate en un ataque de ransomware?</p>
+    <label><input type="radio" name="q8" value="a"> a) Porque el pago activa un segundo cifrado automático.</label>
+    <label><input type="radio" name="q8" value="b"> b) Porque no garantiza recuperar los datos y financia el crimen.</label>
+    <label><input type="radio" name="q8" value="c"> c) Porque las criptomonedas son ilegales en Costa Rica.</label>
+    <label><input type="radio" name="q8" value="d"> d) Porque el rescate siempre supera el valor de los datos.</label>
+  </div>
+
+  <div class="item" id="q9">
+    <p class="pregunta">9. ¿Qué ventaja ofrece un respaldo offline (fuera de línea) frente al ransomware?</p>
+    <label><input type="radio" name="q9" value="a"> a) Cifra los archivos antes de que el malware los alcance.</label>
+    <label><input type="radio" name="q9" value="b"> b) Elimina automáticamente el ransomware al detectarlo.</label>
+    <label><input type="radio" name="q9" value="c"> c) Está desconectado de la red, por lo que el malware no puede cifrarlo.</label>
+    <label><input type="radio" name="q9" value="d"> d) Comparte los datos en la nube antes del ataque.</label>
+  </div>
+
+  <div class="item" id="q10">
+    <p class="pregunta">10. La palabra "lateralmente" en el texto se refiere a que el ransomware se propaga:</p>
+    <label><input type="radio" name="q10" value="a"> a) De manera vertical, infectando primero los niveles superiores de administración.</label>
+    <label><input type="radio" name="q10" value="b"> b) Entre equipos dentro de la misma red, no solo en el dispositivo inicial.</label>
+    <label><input type="radio" name="q10" value="c"> c) A través de medios físicos como memorias USB.</label>
+    <label><input type="radio" name="q10" value="d"> d) Solo hacia dispositivos móviles conectados a Wi-Fi.</label>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN B ===================== -->
+<section class="bloque">
+  <h2>Sección B – Razonamiento Lógico</h2>
+
+  <div class="item" id="q11">
+    <p class="pregunta">11. En una competencia de programación participan 5 estudiantes: Ana, Beto, Carlos, Diana y Esteban. Se sabe que:<br>
+    • Ana termina antes que Beto.<br>
+    • Carlos termina después que Diana pero antes que Ana.<br>
+    • Esteban termina último.<br>
+    ¿Cuál es el orden correcto de llegada (primero a último)?</p>
+    <label><input type="radio" name="q11" value="a"> a) Diana – Carlos – Ana – Beto – Esteban</label>
+    <label><input type="radio" name="q11" value="b"> b) Ana – Diana – Carlos – Beto – Esteban</label>
+    <label><input type="radio" name="q11" value="c"> c) Carlos – Diana – Ana – Beto – Esteban</label>
+    <label><input type="radio" name="q11" value="d"> d) Diana – Ana – Carlos – Beto – Esteban</label>
+  </div>
+
+  <div class="item" id="q12">
+    <p class="pregunta">12. Si DATOS se cifra como GDWRV (cada letra avanza 3 posiciones en el alfabeto), ¿cómo se cifraría la palabra CLAVE?</p>
+    <label><input type="radio" name="q12" value="a"> a) FODSH</label>
+    <label><input type="radio" name="q12" value="b"> b) FODYH</label>
+    <label><input type="radio" name="q12" value="c"> c) FNCYH</label>
+    <label><input type="radio" name="q12" value="d"> d) ENBUD</label>
+  </div>
+
+  <div class="item" id="q13">
+    <p class="pregunta">13. Observe la secuencia: 3, 6, 12, 24, ___. ¿Cuál es el siguiente número?</p>
+    <label><input type="radio" name="q13" value="a"> a) 36</label>
+    <label><input type="radio" name="q13" value="b"> b) 42</label>
+    <label><input type="radio" name="q13" value="c"> c) 48</label>
+    <label><input type="radio" name="q13" value="d"> d) 30</label>
+  </div>
+
+  <div class="item" id="q14">
+    <p class="pregunta">14. Todos los técnicos en informática saben programar. Algunos técnicos en informática trabajan en soporte. Por lo tanto:</p>
+    <label><input type="radio" name="q14" value="a"> a) Todos los que trabajan en soporte saben programar.</label>
+    <label><input type="radio" name="q14" value="b"> b) Algunos de los que trabajan en soporte saben programar.</label>
+    <label><input type="radio" name="q14" value="c"> c) Ningún técnico en informática trabaja en soporte.</label>
+    <label><input type="radio" name="q14" value="d"> d) Solo los que trabajan en soporte saben programar.</label>
+  </div>
+
+  <div class="item" id="q15">
+    <p class="pregunta">15. En un sistema de permisos, el nivel A puede acceder a los niveles B y C; el nivel B puede acceder al C pero no al A; el nivel C no puede acceder a ningún otro. Un usuario con nivel B intenta acceder al nivel A. ¿Qué ocurre?</p>
+    <label><input type="radio" name="q15" value="a"> a) Accede, porque B es anterior a A en el orden alfabético.</label>
+    <label><input type="radio" name="q15" value="b"> b) Accede temporalmente si solicita permiso al administrador.</label>
+    <label><input type="radio" name="q15" value="c"> c) No puede acceder, pues B no tiene permiso sobre A.</label>
+    <label><input type="radio" name="q15" value="d"> d) Accede automáticamente si el nivel C lo autoriza.</label>
+  </div>
+
+  <div class="item" id="q16">
+    <p class="pregunta">16. Observe el patrón: 2, 5, 10, 17, 26, ___. ¿Cuál es el siguiente número?</p>
+    <label><input type="radio" name="q16" value="a"> a) 35</label>
+    <label><input type="radio" name="q16" value="b"> b) 36</label>
+    <label><input type="radio" name="q16" value="c"> c) 37</label>
+    <label><input type="radio" name="q16" value="d"> d) 38</label>
+  </div>
+
+  <div class="item" id="q17">
+    <p class="pregunta">17. Si "p → q" es verdadero y "q → r" es verdadero, ¿cuál de los siguientes enunciados es necesariamente verdadero?</p>
+    <label><input type="radio" name="q17" value="a"> a) r → p</label>
+    <label><input type="radio" name="q17" value="b"> b) p → r</label>
+    <label><input type="radio" name="q17" value="c"> c) ¬p → ¬r</label>
+    <label><input type="radio" name="q17" value="d"> d) q → p</label>
+  </div>
+
+  <div class="item" id="q18">
+    <p class="pregunta">18. Un servidor procesa solicitudes en lotes de 8. Si llegan 100 solicitudes, ¿cuántos lotes completos procesa y cuántas solicitudes quedan pendientes?</p>
+    <label><input type="radio" name="q18" value="a"> a) 12 lotes, 6 pendientes</label>
+    <label><input type="radio" name="q18" value="b"> b) 12 lotes, 4 pendientes</label>
+    <label><input type="radio" name="q18" value="c"> c) 13 lotes, 4 pendientes</label>
+    <label><input type="radio" name="q18" value="d"> d) 11 lotes, 12 pendientes</label>
+  </div>
+
+  <div class="item" id="q19">
+    <p class="pregunta">19. Cuatro switches (W, X, Y, Z) están conectados en cadena: W–X–Y–Z. Un paquete debe ir de W a Z pasando por todos los switches. Si X falla, ¿puede el paquete llegar a Z?</p>
+    <label><input type="radio" name="q19" value="a"> a) Sí, porque puede ir directamente de W a Y.</label>
+    <label><input type="radio" name="q19" value="b"> b) No, porque la cadena está rota en X y no hay ruta alternativa.</label>
+    <label><input type="radio" name="q19" value="c"> c) Sí, pero solo si Y también falla.</label>
+    <label><input type="radio" name="q19" value="d"> d) No, porque Z siempre depende de W directamente.</label>
+  </div>
+
+  <div class="item" id="q20">
+    <p class="pregunta">20. Analice: "Si la contraseña tiene más de 12 caracteres Y contiene al menos un símbolo, entonces es considerada fuerte." La contraseña "Segura#2024!" tiene 12 caracteres y contiene símbolos. ¿Es considerada fuerte?</p>
+    <label><input type="radio" name="q20" value="a"> a) Sí, porque contiene un símbolo.</label>
+    <label><input type="radio" name="q20" value="b"> b) No, porque no cumple la condición de MÁS DE 12 caracteres.</label>
+    <label><input type="radio" name="q20" value="c"> c) Sí, porque tiene exactamente 12 caracteres.</label>
+    <label><input type="radio" name="q20" value="d"> d) Depende del sistema que evalúe la contraseña.</label>
+  </div>
+
+  <div class="item" id="q21">
+    <p class="pregunta">21. Complete la analogía: FIREWALL es a RED como CERRADURA es a:</p>
+    <label><input type="radio" name="q21" value="a"> a) Puerta</label>
+    <label><input type="radio" name="q21" value="b"> b) Casa</label>
+    <label><input type="radio" name="q21" value="c"> c) Llave</label>
+    <label><input type="radio" name="q21" value="d"> d) Ventana</label>
+  </div>
+
+  <div class="item" id="q22">
+    <p class="pregunta">22. En un diagrama de flujo, un rombo representa:</p>
+    <label><input type="radio" name="q22" value="a"> a) El inicio o fin del proceso.</label>
+    <label><input type="radio" name="q22" value="b"> b) Una operación de entrada/salida de datos.</label>
+    <label><input type="radio" name="q22" value="c"> c) Una decisión o condición con múltiples salidas.</label>
+    <label><input type="radio" name="q22" value="d"> d) Un conector entre dos páginas del diagrama.</label>
+  </div>
+</section>
+
+<!-- ===================== SECCIÓN C ===================== -->
+<section class="bloque">
+  <h2>Sección C – Operaciones Matemáticas y Porcentajes</h2>
+
+  <div class="item" id="q23">
+    <p class="pregunta">23. Una empresa de ciberseguridad detectó 240 intentos de intrusión en enero. En febrero los intentos aumentaron un 35%. ¿Cuántos intentos hubo en febrero?</p>
+    <label><input type="radio" name="q23" value="a"> a) 284</label>
+    <label><input type="radio" name="q23" value="b"> b) 318</label>
+    <label><input type="radio" name="q23" value="c"> c) 324</label>
+    <label><input type="radio" name="q23" value="d"> d) 336</label>
+  </div>
+
+  <div class="item" id="q24">
+    <p class="pregunta">24. Un disco duro tiene capacidad de 2 TB. Actualmente tiene ocupado el 68% de su espacio. ¿Cuántos GB de espacio libre quedan? (1 TB = 1024 GB)</p>
+    <label><input type="radio" name="q24" value="a"> a) 655,68 GB</label>
+    <label><input type="radio" name="q24" value="b"> b) 655,36 GB</label>
+    <label><input type="radio" name="q24" value="c"> c) 696,32 GB</label>
+    <label><input type="radio" name="q24" value="d"> d) 720,00 GB</label>
+  </div>
+
+  <div class="item" id="q25">
+    <p class="pregunta">25. Un técnico cobra ₡18 500 por hora. Si trabaja 7 horas y media en un proyecto, ¿cuánto cobra en total?</p>
+    <label><input type="radio" name="q25" value="a"> a) ₡129 500</label>
+    <label><input type="radio" name="q25" value="b"> b) ₡138 750</label>
+    <label><input type="radio" name="q25" value="c"> c) ₡144 000</label>
+    <label><input type="radio" name="q25" value="d"> d) ₡148 000</label>
+  </div>
+
+  <div class="item" id="q26">
+    <p class="pregunta">26. De 320 equipos revisados en una auditoría, el 15% tenía antivirus desactualizado y el 8% no tenía antivirus. ¿Cuántos equipos en total presentaban problemas con el antivirus?</p>
+    <label><input type="radio" name="q26" value="a"> a) 68</label>
+    <label><input type="radio" name="q26" value="b"> b) 72</label>
+    <label><input type="radio" name="q26" value="c"> c) 74</label>
+    <label><input type="radio" name="q26" value="d"> d) 76</label>
+  </div>
+
+  <div class="item" id="q27">
+    <p class="pregunta">27. Una contraseña segura se genera combinando letras mayúsculas (26), minúsculas (26), dígitos (10) y símbolos (8). ¿Cuántos caracteres distintos hay disponibles en total?</p>
+    <label><input type="radio" name="q27" value="a"> a) 60</label>
+    <label><input type="radio" name="q27" value="b"> b) 68</label>
+    <label><input type="radio" name="q27" value="c"> c) 70</label>
+    <label><input type="radio" name="q27" value="d"> d) 72</label>
+  </div>
+
+  <div class="item" id="q28">
+    <p class="pregunta">28. En una red con 5 computadoras, cada computadora está conectada directamente con todas las demás (topología de malla completa). ¿Cuántas conexiones físicas hay en total?</p>
+    <label><input type="radio" name="q28" value="a"> a) 8</label>
+    <label><input type="radio" name="q28" value="b"> b) 10</label>
+    <label><input type="radio" name="q28" value="c"> c) 12</label>
+    <label><input type="radio" name="q28" value="d"> d) 15</label>
+  </div>
+
+  <div class="item" id="q29">
+    <p class="pregunta">29. El precio original de un switch de red es ₡85 000. La tienda aplica un descuento del 12% y luego cobra un IVA del 13% sobre el precio con descuento. ¿Cuál es el precio final?</p>
+    <label><input type="radio" name="q29" value="a"> a) ₡84 082</label>
+    <label><input type="radio" name="q29" value="b"> b) ₡84 286
+
+    <label><input type="radio" name="q29" value="c"> c) ₡83 666</label>
+    <label><input type="radio" name="q29" value="d"> d) ₡86 020</label>
+  </div>
+
+  <div class="item" id="q30">
+    <p class="pregunta">30. Si un archivo de 450 MB se descarga a una velocidad de 6 MB/s, ¿cuántos minutos y segundos tardará la descarga?</p>
+    <label><input type="radio" name="q30" value="a"> a) 1 min 15 seg</label>
+    <label><input type="radio" name="q30" value="b"> b) 1 min 25 seg</label>
+    <label><input type="radio" name="q30" value="c"> c) 75 segundos</label>
+    <label><input type="radio" name="q30" value="d"> d) 80 segundos</label>
+  </div>
+
+  <div class="item" id="q31">
+    <p class="pregunta">31. Una empresa reportó que el 40% de sus incidentes de seguridad fueron por contraseñas débiles, el 25% por phishing y el resto por otras causas. Si hubo 200 incidentes en total, ¿cuántos fueron por "otras causas"?</p>
+    <label><input type="radio" name="q31" value="a"> a) 60</label>
+    <label><input type="radio" name="q31" value="b"> b) 65</label>
+    <label><input type="radio" name="q31" value="c"> c) 70</label>
+    <label><input type="radio" name="q31" value="d"> d) 75</label>
+  </div>
+
+  <div class="item" id="q32">
+    <p class="pregunta">32. Resuelva: 3² + 4² = ___</p>
+    <label><input type="radio" name="q32" value="a"> a) 49</label>
+    <label><input type="radio" name="q32" value="b"> b) 25</label>
+    <label><input type="radio" name="q32" value="c"> c) 14</label>
+    <label><input type="radio" name="q32" value="d"> d) 7</label>
+  </div>
+
+  <div class="item" id="q33">
+    <p class="pregunta">33. Un colegio técnico tiene 480 estudiantes. Si el 62,5% son hombres, ¿cuántas mujeres hay?</p>
+    <label><input type="radio" name="q33" value="a"> a) 160</label>
+    <label><input type="radio" name="q33" value="b"> b) 180</label>
+    <label><input type="radio" name="q33" value="c"> c) 200</label>
+    <label><input type="radio" name="q33" value="d"> d) 210</label>
+  </div>
+
+  <div class="item" id="q34">
+    <p class="pregunta">34. Una sala de servidores consume 3 750 watts por hora. ¿Cuántos kilovatios-hora (kWh) consume en 8 horas de operación?</p>
+    <label><input type="radio" name="q34" value="a"> a) 28 kWh</label>
+    <label><input type="radio" name="q34" value="b"> b) 30 kWh</label>
+    <label><input type="radio" name="q34" value="c"> c) 32 kWh</label>
+    <label><input type="radio" name="q34" value="d"> d) 37,5 kWh</label>
+  </div>
+
+  <div class="item" id="q35">
+    <p class="pregunta">35. Un administrador de red divide una dirección IP clase C en 4 subredes iguales. Si la red original tiene 254 hosts disponibles, ¿cuántos hosts disponibles tendrá cada subred?</p>
+    <label><input type="radio" name="q35" value="a"> a) 62</label>
+    <label><input type="radio" name="q35" value="b"> b) 63</label>
+    <label><input type="radio" name="q35" value="c"> c) 64</label>
+    <label><input type="radio" name="q35" value="d"> d) 58</label>
+  </div>
+
+  <div class="item" id="q36">
+    <p class="pregunta">36. Si A = 1, B = 2, C = 3 … Z = 26, ¿cuál es la suma de los valores de la palabra "RED"?</p>
+    <label><input type="radio" name="q36" value="a"> a) 22</label>
+    <label><input type="radio" name="q36" value="b"> b) 23</label>
+    <label><input type="radio" name="q36" value="c"> c) 27</label>
+    <label><input type="radio" name="q36" value="d"> d) 27</label>
+  </div>
+
+  <div class="item" id="q37">
+    <p class="pregunta">37. Un técnico necesita tender cable de red en un edificio. Cada piso requiere 35 metros de cable y el edificio tiene 6 pisos. Si el cable cuesta ₡950 el metro, ¿cuánto costará el cable total?</p>
+    <label><input type="radio" name="q37" value="a"> a) ₡199 500</label>
+    <label><input type="radio" name="q37" value="b"> b) ₡199 000</label>
+    <label><input type="radio" name="q37" value="c"> c) ₡210 000</label>
+    <label><input type="radio" name="q37" value="d"> d) ₡196 000</label>
+  </div>
+
+  <div class="item" id="q38">
+    <p class="pregunta">38. En notación binaria, ¿cuál es el equivalente decimal de 1101?</p>
+    <label><input type="radio" name="q38" value="a"> a) 11</label>
+    <label><input type="radio" name="q38" value="b"> b) 12</label>
+    <label><input type="radio" name="q38" value="c"> c) 13</label>
+    <label><input type="radio" name="q38" value="d"> d) 14</label>
+  </div>
+
+  <div class="item" id="q39">
+    <p class="pregunta">39. Un proyecto de seguridad informática tiene un presupuesto de ₡2 400 000. Se ha ejecutado el 37,5% del presupuesto. ¿Cuánto dinero queda disponible?</p>
+    <label><input type="radio" name="q39" value="a"> a) ₡1 400 000</label>
+    <label><input type="radio" name="q39" value="b"> b) ₡1 480 000</label>
+    <label><input type="radio" name="q39" value="c"> c) ₡1 500 000</label>
+    <label><input type="radio" name="q39" value="d"> d) ₡1 520 000</label>
+  </div>
+
+  <div class="item" id="q40">
+    <p class="pregunta">40. Un backup diario ocupa 1,2 GB. Si se almacenan backups de lunes a viernes durante 4 semanas, ¿cuántos GB ocupa el almacenamiento total?</p>
+    <label><input type="radio" name="q40" value="a"> a) 20 GB</label>
+    <label><input type="radio" name="q40" value="b"> b) 24 GB</label>
+    <label><input type="radio" name="q40" value="c"> c) 28 GB</label>
+    <label><input type="radio" name="q40" value="d"> d) 32 GB</label>
+  </div>
+</section>
+
+<button class="resultado-btn" onclick="calcularPuntaje()">Ver mi puntaje</button>
+<div id="resultado"></div>
+
+<footer>
+  <p>Prueba de Admisión – Colegio Técnico Profesional &copy; 2024 · MEP Costa Rica</p>
+</footer>
+
+<script>
+  // Clave de respuestas correctas
+  const clave = {
+    q1:'b', q2:'b', q3:'c', q4:'b', q5:'c',
+    q6:'b', q7:'c', q8:'b', q9:'c', q10:'b',
+    q11:'a', q12:'b', q13:'c', q14:'b', q15:'c',
+    q16:'c', q17:'b', q18:'b', q19:'b', q20:'b',
+    q21:'b', q22:'c',
+    q23:'c', q24:'b', q25:'b', q26:'a', q27:'c',
+    q28:'b', q29:'a', q30:'c', q31:'c', q32:'b',
+    q33:'b', q34:'b', q35:'a', q36:'c', q37:'a',
+    q38:'c', q39:'c', q40:'b'
+  };
+
+  function calcularPuntaje() {
+    let correctas = 0;
+    let sinResponder = 0;
+    for (const [q, respCorrecta] of Object.entries(clave)) {
+      const sel = document.querySelector(`input[name="${q}"]:checked`);
+      if (!sel) { sinResponder++; continue; }
+      if (sel.value === respCorrecta) correctas++;
+    }
+    const total = Object.keys(clave).length;
+    const pct = ((correctas / total) * 100).toFixed(1);
+    const div = document.getElementById('resultado');
+    div.style.display = 'block';
+    div.textContent = `Obtuviste ${correctas} de ${total} respuestas correctas (${pct}%). ${sinResponder > 0 ? sinResponder + ' preguntas sin responder.' : ''}`;
+    div.className = correctas >= (total * 0.7) ? 'pass' : 'fail';
+  }
+</script>
+</body>
+</html>
