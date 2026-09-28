@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Respuestas – Prueba de Admisión CTP</title>
+  <title>[BORRADOR] Respuestas – Prueba de Admisión CTP</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -11,6 +11,22 @@
       background: #f4f6fb;
       color: #222;
       padding: 24px 16px;
+    }
+    /* ── Marca de agua BORRADOR ── */
+    body::before {
+      content: 'BORRADOR';
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-35deg);
+      font-size: 9rem;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      color: rgba(180, 0, 0, 0.08);
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 9999;
+      user-select: none;
     }
     header {
       background: #1a5c1a;
@@ -90,6 +106,10 @@
 <header>
   <h1>Hoja de Respuestas – Prueba de Admisión CTP</h1>
   <p>Uso exclusivo de docentes y aplicadores | MEP Costa Rica</p>
+  <p style="margin-top:10px;">
+    <span style="background:#c0392b;color:#fff;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;padding:3px 12px;border-radius:4px;text-transform:uppercase;">⚠ Borrador – Draft v1.0</span>
+  </p>
+  <p style="margin-top:8px;font-size:0.83rem;opacity:0.82;">Preparado por: Nickol Ramírez Sandí &nbsp;|&nbsp; 2027</p>
 </header>
 
 <div class="aviso">
@@ -392,7 +412,8 @@
 </section>
 
 <footer>
-  <p>Hoja de respuestas – Prueba de Admisión CTP &copy; 2024 · MEP Costa Rica</p>
+  <p>Hoja de Respuestas – Prueba de Admisión CTP &copy; 2027 · MEP Costa Rica</p>
+  <p>Preparado por: Nickol Ramírez Sandí &nbsp;|&nbsp; <em>Documento borrador – no distribuir sin autorización</em></p>
 </footer>
 
 </body>

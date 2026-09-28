@@ -1,6 +1,10 @@
 # Prueba de Admisión – Colegio Técnico Profesional (CTP)
 
+> ⚠️ **BORRADOR / DRAFT v1.0** — Documento en revisión. No distribuir sin autorización.
+
 Material de evaluación para el proceso de admisión a colegios técnicos profesionales de Costa Rica, alineado con los lineamientos del Ministerio de Educación Pública (MEP).
+
+**Preparado por:** Nickol Ramírez Sandí &nbsp;|&nbsp; **Año:** 2027
 
 ---
 
