@@ -8,8 +8,63 @@ Material de evaluación para el proceso de admisión a colegios técnicos profes
 
 | Archivo | Descripción |
 |---|---|
-| `prueba_admision.html` | Prueba de admisión con 40 ítems de selección única |
+| `prueba_admision.html` | Prueba de admisión — 40 ítems de selección única |
 | `respuestas_admision.html` | Hoja de respuestas con explicación de cada ítem |
+| `prueba_admision.pdf` | Versión imprimible de la prueba |
+| `respuestas_admision.pdf` | Versión imprimible de las respuestas |
+
+---
+
+## 🌐 Cómo abrir la prueba desde el navegador (GitHub Pages)
+
+La forma más sencilla de realizar la prueba en línea es usando **GitHub Pages**:
+
+**URL directa de la prueba:**
+```
+https://nick802.github.io/Luke-Cote/prueba_admision.html
+```
+
+**URL de las respuestas (solo docentes):**
+```
+https://nick802.github.io/Luke-Cote/respuestas_admision.html
+```
+
+> Si la URL no carga, GitHub Pages puede no estar activado aún. Sigue estos pasos para activarlo:
+> 1. Ve al repositorio en GitHub: https://github.com/Nick802/Luke-Cote
+> 2. Clic en **Settings** (Configuración)
+> 3. En el menú izquierdo, clic en **Pages**
+> 4. En **Source**, selecciona la rama **main** y la carpeta **/ (root)**
+> 5. Clic en **Save**
+> 6. Espera 1-2 minutos y recarga la URL
+
+---
+
+## 📥 Cómo descargar y abrir localmente
+
+Si preferís trabajar sin internet:
+
+1. Descarga el repositorio como ZIP:
+   - Ve a https://github.com/Nick802/Luke-Cote
+   - Clic en el botón verde **Code → Download ZIP**
+2. Descomprimí el archivo
+3. Abrí `prueba_admision.html` con cualquier navegador (Chrome, Firefox, Edge)
+
+---
+
+## 🖨️ Cómo generar el PDF (imprimir desde navegador)
+
+Abrí el HTML en el navegador y usá la función de impresión:
+
+- **Windows / Linux:** `Ctrl + P`
+- **Mac:** `Cmd + P`
+
+En el diálogo de impresión:
+- Destino: **Guardar como PDF**
+- Diseño: **Vertical**
+- Márgenes: **Predeterminado**
+- Activá la opción **Gráficos de fondo** para conservar los colores
+
+Los archivos `prueba_admision.pdf` y `respuestas_admision.pdf` incluidos en el repo ya son versiones listas para imprimir.
 
 ---
 
@@ -39,14 +94,12 @@ Problemas contextualizados en entornos tecnológicos: porcentajes, conversiones 
 
 ---
 
-## Uso
+## ⚙️ Autocalificación automática
 
-1. Abrir `prueba_admision.html` en cualquier navegador moderno.
-2. Responder los 40 ítems y presionar **"Ver mi puntaje"** para obtener el resultado automático.
-3. El archivo `respuestas_admision.html` es de uso exclusivo para docentes y aplicadores.
+La prueba HTML incluye un botón **"Ver mi puntaje"** al final. Al presionarlo calcula automáticamente el puntaje, indica cuántas respuestas son correctas y muestra si el estudiante supera el 70% de aprobación.
 
 ---
 
-## Nota
+## Nota para docentes
 
-Los ítems están diseñados para evaluar el perfil de ingreso a especialidades técnicas (Informática, Redes, Electrónica). Se recomienda revisar y validar el ítem 26 y el ítem 29 antes de la aplicación oficial, según las notas incluidas en la hoja de respuestas.
+El archivo `respuestas_admision.html` es de uso exclusivo para personal docente y aplicadores. No compartir con estudiantes antes de la aplicación.
