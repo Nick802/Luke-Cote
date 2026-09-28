@@ -15,27 +15,40 @@ Material de evaluación para el proceso de admisión a colegios técnicos profes
 
 ---
 
-## 🌐 Cómo abrir la prueba desde el navegador (GitHub Pages)
+## 🌐 Cómo abrir la prueba desde el navegador
 
-La forma más sencilla de realizar la prueba en línea es usando **GitHub Pages**:
+### Opción 1 — Sin configuración (disponible de inmediato)
 
-**URL directa de la prueba:**
+Usa **htmlpreview.github.io** para abrir los archivos directamente sin ninguna configuración:
+
+**Prueba de admisión:**
+```
+https://htmlpreview.github.io/?https://github.com/Nick802/Luke-Cote/blob/main/prueba_admision.html
+```
+
+**Respuestas (solo docentes):**
+```
+https://htmlpreview.github.io/?https://github.com/Nick802/Luke-Cote/blob/main/respuestas_admision.html
+```
+
+---
+
+### Opción 2 — GitHub Pages (URL más corta y limpia)
+
+Activá GitHub Pages para tener una URL directa:
+
+1. Ve al repositorio: https://github.com/Nick802/Luke-Cote
+2. Clic en **Settings**
+3. Menú izquierdo → **Pages**
+4. En **Branch**, seleccioná **main** y carpeta **/ (root)**
+5. Clic en **Save** — estará activo en 1-2 minutos
+
+Una vez activado, las URLs serán:
+
 ```
 https://nick802.github.io/Luke-Cote/prueba_admision.html
-```
-
-**URL de las respuestas (solo docentes):**
-```
 https://nick802.github.io/Luke-Cote/respuestas_admision.html
 ```
-
-> Si la URL no carga, GitHub Pages puede no estar activado aún. Sigue estos pasos para activarlo:
-> 1. Ve al repositorio en GitHub: https://github.com/Nick802/Luke-Cote
-> 2. Clic en **Settings** (Configuración)
-> 3. En el menú izquierdo, clic en **Pages**
-> 4. En **Source**, selecciona la rama **main** y la carpeta **/ (root)**
-> 5. Clic en **Save**
-> 6. Espera 1-2 minutos y recarga la URL
 
 ---
 
